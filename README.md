@@ -39,9 +39,10 @@ Berikut adalah struktur proyek:
 |   |   |-- transaction.go # Manages database interactions for transaction data
 |   |   |-- transaction_repository_test.go  # Manages database interactions for transaction unit testing
 |   |-- service/
-|   |   |-- customer_service_test.go  # Implements business logic and interacts with the repository for customer operations
+|   |   |-- customer_service_test.go  # Unit testing for customer operations
 |   |   |-- customer.go  # Implements business logic and interacts with the repository for customer operations
 |   |   |-- transaction.go # Implements business logic and interacts with the repository for transaction operations
+|   |   |-- transaction_service_test.go # Unit testing for transaction operations
 |-- Dockerfile           # Contains instructions to build a Docker image for the project
 |-- go.mod               # Module definition file for managing dependencies
 |-- go.sum               # Sum file containing expected cryptographic hashes for module dependencies
