@@ -8,7 +8,7 @@
 Penyesuaian strutur database beserta code golang untuk menyempurnakan bisnis perusahaan XYZ
 
 ## Instalasi
-Jika ada langkah-langkah instalasi yang perlu dilakukan, Anda bisa menuliskannya di sini. Misalnya:
+Jika ada langkah-langkah instalasi yang perlu dilakukan:
 1. Clone repositori ini ke lokal Anda.
 2. Buka file .sql di dalam folder "database".
 3. Jalankan skrip SQL untuk membuat database.
