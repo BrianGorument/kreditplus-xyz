@@ -10,13 +10,14 @@ import (
 )
 
 type CustomerHandler struct {
-	service service.CustomerServiceInt
+	service *service.CustomerService
 }
 
 func NewCustomerHandler(db *sql.DB) *CustomerHandler {
 	repo := repository.NewCustomerRepository(db)
-	svc := service.NewCustomerService(repo)
-	return &CustomerHandler{service: svc}
+	return &CustomerHandler{
+		service: service.NewCustomerService(repo),
+	}
 }
 
 func (h *CustomerHandler) Handle(w http.ResponseWriter, r *http.Request) {

@@ -3,15 +3,12 @@ package service
 import (
 	"kreditplus-xyz/internal/model"
 	"kreditplus-xyz/internal/repository"
+	"sync"
 )
-
-type CustomerServiceInt interface {
-	GetAllCustomers() ([]model.Customer, error)
-	CreateCustomer(customer model.Customer) error
-}
 
 type CustomerService struct {
 	repository *repository.CustomerRepository
+	mu         sync.Mutex
 }
 
 func NewCustomerService(repo *repository.CustomerRepository) *CustomerService {
